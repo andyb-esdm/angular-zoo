@@ -1,0 +1,17 @@
+<div class="card text-center m-1">
+  <div class="card-block p-2" (click)="isCollapsed = !isCollapsed">
+    <h5 class="card-title">
+      {{animal.name}}
+    </h5>
+  </div>
+  <div class="card-block p-2" (click)="isCollapsed = !isCollapsed">
+    <h5 class="card-title">
+      <img [src]="animal.imageUrl">
+    </h5>
+  </div>
+  <div class="card-block p-2" (click)="isCollapsed = !isCollapsed">
+    <p class="card-title">
+      {{animal.description}}
+    </p>
+  </div>
+</div>

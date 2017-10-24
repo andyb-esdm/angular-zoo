@@ -1,0 +1,11 @@
+
+  <div class="card mb-3">
+  <div class="card-block bg-info text-light p-2" (click)="isCollapsed = !isCollapsed">
+    <h5 class="card-title">
+      {{title}}
+    </h5>
+  </div>
+  <div class="card-block p-2" [collapse]="isCollapsed">
+    <ng-content></ng-content>
+  </div>
+</div>

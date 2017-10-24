@@ -1,0 +1,128 @@
+<div class="btn-group" dropdown>
+  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+    Button dropdown
+    <span class="caret"></span>
+  </button>
+  <ul *dropdownMenu class="dropdown-menu" role="menu">
+    <li role="menuitem">
+      <a class="dropdown-item" href="#">Action</a>
+    </li>
+    <li role="menuitem">
+      <a class="dropdown-item" href="#">Another action</a>
+    </li>
+    <li role="menuitem">
+      <a class="dropdown-item" href="#">Something else here</a>
+    </li>
+    <li class="divider dropdown-divider"></li>
+    <li role="menuitem">
+      <a class="dropdown-item" href="#">Separated link</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <span class="fa fa-user-circle fa-2x"></span>
+</div>
+
+
+
+<a routerLink="">next</a>
+
+  <app-code-example [title]="'Interpolation'" [description]="'Evaluate an experssion between double curly braces. When the expression changes it will be re-evaluated.'">
+    <div appCode ngNonBindable>
+      <![CDATA[
+{{expression}}
+
+TypeScript:
+aardvark: Animal = {
+  name: 'Aardvark',
+  description: 'A medium-sized, burrowing, nocturnal mammal native to Africa.',
+  imageUrl:''
+};
+
+Markup:
+<h5>{{aardvark.name}}</h5>
+<p>{{aardvark.description}}</p>
+      ]]>
+    </div>
+  </app-code-example>
+  <app-collapse-card>
+    <h5>{{aardvark.name}}</h5>
+    <p>{{aardvark.description}}</p>
+  </app-collapse-card>
+
+  <app-code-example [title]="'Property Binding'" [description]="'Properties of the DOM bound to properties of the component. The expression is \'input\' into the property. This includes element properties, component properties and directive properties'">
+    <div appCode ngNonBindable>
+      <![CDATA[
+[property]="expression"
+
+<img [src]="animal.imageUrl">
+<app-animal-detail [animal]="currentAnimal"></animal-detail>
+<div [ngClass]="selected: isSelected">Aardvark</div>
+    ]]>
+    </div>
+  </app-code-example>
+  <app-collapse-card>
+    <app-animal-detail [animal]="aardvark"></app-animal-detail>
+  </app-collapse-card>
+
+  <app-code-example [title]="'Property Binding with Nested Properties'" [description]="'For attributes use attr. Use dots for nested properties. Attribute binding, class property binding, style property binding'">
+    <div appCode ngNonBindable>
+      <![CDATA[
+<button [attr.aria-label]="ok">ok</button>
+<div [class.isStopped]="isStopped">Stopped</div>
+<button [style.color]="isStopped? 'red' : 'green'">Stopped</button>
+      ]]>
+    </div>
+  </app-code-example>
+
+  <app-code-example [title]="'Event Binding'" [description]="'Execute an expression when an event occurs. Element events and custom component events'">
+    <div appCode ngNonBindable>
+      <![CDATA[
+(event-target)="statement"
+      
+<button (click)="save()">Save</button>
+<animal-detail (changed)="animalChanged()"></animal-detail>
+        ]]>
+    </div>
+  </app-code-example>
+  <app-collapse-card>
+    <button type="button" class="btn btn-primary" (click)="openModal(template)">Show me the aardvark</button>
+  
+    <ng-template #template>
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-auto" >
+          <app-animal-detail [animal]="aardvark"></app-animal-detail>
+      </div>
+    </ng-template>
+  </app-collapse-card>
+
+  <app-code-example [title]="'Two Way Binding'" [description]="'Combines property binding with event binding. Uses a built-in directive called ngModel'">
+    <div appCode ngNonBindable>
+      <![CDATA[
+[()] Banana in a box
+  
+<input [(ngModel)]="animal.name">
+          ]]>
+    </div>
+  </app-code-example>
+  <app-collapse-card>
+    <div class="row">
+      <div class="col">
+        <app-animal-detail [animal]="aardvark"></app-animal-detail>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label class="col-form-label" for="name">Change my name:</label>
+          <input [(ngModel)]="aardvark.name" type="text" class="form-control" id="name" placeholder="Enter a name">
+        </div>
+      </div>
+    </div>
+  </app-collapse-card>
+
+
+Services for shared logic in an application Just a class Single instance Provide it Inject it
