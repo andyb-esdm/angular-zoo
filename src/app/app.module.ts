@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
     HomeComponent,
     NavComponent,
     DataBindingComponent,
-    AnimalDetailComponent
+    AnimalDetailComponent,
+    ZooAnimalFormComponent
   ],
   imports: [
     BrowserModule,
