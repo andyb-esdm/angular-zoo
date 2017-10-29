@@ -1,0 +1,8 @@
+<div class="animals-selector" [formGroup]="parent">
+  <div class="animals-selector-item" *ngFor="let animal of animals" [class.active]="isActive(animal)" (click)="onSelect(animal)">
+    {{ animal }}
+  </div>
+  <div class="error" *ngIf="invalid">
+    Select at least 1 animal
+  </div>
+</div>

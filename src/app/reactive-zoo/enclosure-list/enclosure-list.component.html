@@ -1,0 +1,7 @@
+<div class="enclosure-list">
+  <h2>Enclosures</h2>
+  <div *ngFor="let enclosure of enclosures">
+    <p>{{ enclosure.name }}</p>
+    <span>{{ enclosure.animals | join }}</span>
+  </div>
+</div>

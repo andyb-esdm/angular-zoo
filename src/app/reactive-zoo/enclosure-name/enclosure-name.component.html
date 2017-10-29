@@ -1,0 +1,6 @@
+<div class="enclosure-name" [formGroup]="parent">
+  <input type="text" placeholder="Enclosure name, e.g. Nocturnal House" formControlName="name">
+  <div class="error" *ngIf="invalid">
+    Enclosure name is required
+  </div>
+</div>

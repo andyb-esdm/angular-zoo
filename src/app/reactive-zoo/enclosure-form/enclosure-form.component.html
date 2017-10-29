@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+
+  <app-animals-selector [parent]="form" [animals]="animals" [selected]="control.value" (select)="selectAnimal($event)">
+  </app-animals-selector>
+
+  <app-enclosure-name [parent]="form">
+  </app-enclosure-name>
+
+  <app-enclosure-selected [parent]="form" [selected]="control.value" (remove)="removeAnimal($event)">
+  </app-enclosure-selected>
+
+  <app-enclosure-button [parent]="form" (add)="onSubmit()">
+    Add Enclosure
+  </app-enclosure-button>
+
+</form>

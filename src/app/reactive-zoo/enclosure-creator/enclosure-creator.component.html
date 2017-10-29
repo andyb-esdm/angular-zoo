@@ -1,0 +1,13 @@
+<div class="enclosure-creator">
+  <div class="enclosure-creator-title">
+    <h1>
+      <img src="/assets/logo.png"> Enclosure Creator
+    </h1>
+  </div>
+  <div class="enclosure-creator-panes">
+    <app-enclosure-form [animals]="animals$ | async" (add)="addEnclosure($event)">
+    </app-enclosure-form>
+    <app-enclosure-list [enclosures]="enclosures$ | async">
+    </app-enclosure-list>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="enclosure-selected" [formGroup]="parent">
+  <div class="enclosure-selected-empty" *ngIf="!selected.length">
+    Select animals to create an enclosure
+  </div>
+  <div class="enclosure-selected-list" *ngIf="selected.length" formArrayName="animals">
+    <div class="enclosure-selected-item" *ngFor="let animal of selected; index as i;">
+      <div [formGroupName]="i">
+        <span class="fa fa-check"></span> {{ animal }}
+        <button type="button" (click)="onRemove(i)">
+          <span class="fa fa-times"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,7 @@ const ngxModules = [
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { SharedModule } from './shared/shared.module';
+import { ReactiveZooModule } from './reactive-zoo/reactive-zoo.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -36,7 +37,8 @@ import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.compon
     FormsModule,
     AppRoutingModule,
     ...ngxModules,
-    SharedModule
+    SharedModule,
+    ReactiveZooModule
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]
