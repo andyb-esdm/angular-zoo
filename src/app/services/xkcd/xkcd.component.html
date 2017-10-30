@@ -1,0 +1,13 @@
+<h1>XKCD</h1>
+<h2>{{title}}</h2>
+
+<img *ngIf="imageUrl" [src]="imageUrl" [alt]="alt" [title]="alt">
+
+<hr>
+<div class="form-inline">
+  <div class="form-group mr-2 ml-2">
+    <input [(ngModel)]="comic" type="number" class="form-control" />
+  </div>
+  
+    <button class="btn btn-primary" (click)="getXKCD()">Get Another XKCD</button>
+</div>

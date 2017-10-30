@@ -1,24 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-
-import { WikipediaArticleComponent } from './wikipedia-article/wikipedia-article.component';
-import { WikipediaService } from './wikipedia.service';
+import { JsonpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { XkcdComponent } from './xkcd/xkcd.component';
+import { XkcdService } from './xkcd.service';
 
 const servicesRoutes: Routes = [
-  { path: 'services', component: WikipediaArticleComponent }
+  { path: 'services', component: XkcdComponent }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule,
+    JsonpModule,
+    FormsModule,
     RouterModule.forChild(servicesRoutes)
   ],
   declarations: [
-    WikipediaArticleComponent
+    XkcdComponent
   ],
-  providers: [WikipediaService]
+  providers: [XkcdService]
 })
 export class ServicesModule { }
