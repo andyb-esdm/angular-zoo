@@ -16,6 +16,7 @@ import { SharedModule } from './shared/shared.module';
 import { ReactiveZooModule } from './reactive-zoo/reactive-zoo.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { AppRoutingModule } from './app-routing.module';
+import { ServicesModule } from './services/services.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -36,7 +37,8 @@ import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.compon
     ...ngxModules,
     SharedModule,
     DataBindingModule,
-    ReactiveZooModule
+    ReactiveZooModule,
+    ServicesModule
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]
