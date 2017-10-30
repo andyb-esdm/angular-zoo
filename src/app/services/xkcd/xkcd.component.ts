@@ -23,6 +23,9 @@ export class XkcdComponent implements OnInit {
   }
 
   getXKCD() {
+    this.imageUrl = null;
+    this.title = '';
+    this.alt = '';
     this.xkcdService.getArticle(this.comic).subscribe(data => {
       console.log(data);
       this.imageUrl = data.img;
