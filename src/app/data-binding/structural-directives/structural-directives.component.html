@@ -1,0 +1,11 @@
+<h2>Animal List</h2>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let animal of animals">
+    {{animal.name}}
+  </li>
+</ul>
+
+<h2>Animal Details List</h2>
+<div class="animal-details-list">
+    <app-animal-detail *ngFor="let animal of animals" [animal]="animal"></app-animal-detail>
+</div>

@@ -1,15 +1,30 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" routerLink="">Angular Zoo</a>
 
-  <div class="navbar" id="navbarsExample04">
+  <div class="navbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" routerLink="home" routerLinkActive="active">Home
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="data-binding" routerLinkActive="active">Data Binding</a>
+      <li class="nav-item dropdown">
+        <a href="nav-item dropdown" dropdown>
+            <a href dropdownToggle (click)="false" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Data Binding</a>
+            <div *dropdownMenu class="dropdown-menu">
+                <a class="dropdown-item" routerLink="data-binding/interpolation">String Interpolation</a>
+                <a class="dropdown-item" routerLink="data-binding/property-binding">Property Binding</a>
+                <a class="dropdown-item" routerLink="data-binding/property-binding-nested">Nested Property Binding</a>
+                <a class="dropdown-item" routerLink="data-binding/event-binding">Event Binding</a>
+                <a class="dropdown-item" routerLink="data-binding/structural-directives">Structural Directives</a>
+                <a class="dropdown-item" routerLink="data-binding/two-way-binding">Two Way Binding</a>
+              </div>
+        </a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="data-binding" routerLinkActive="active">Data Binding
+          </a>
+        </li>
       <li class="nav-item dropdown" dropdown>
         <a href dropdownToggle (click)="false" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
           aria-expanded="false">Zoo</a>

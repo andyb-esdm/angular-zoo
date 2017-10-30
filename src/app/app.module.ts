@@ -20,8 +20,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
-//import { DataBindingComponent } from './data-binding/data-binding.component';
-import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
 
 @NgModule({
@@ -29,8 +27,6 @@ import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.compon
     AppComponent,
     HomeComponent,
     NavComponent,
-//    DataBindingComponent,
-    AnimalDetailComponent,
     ZooAnimalFormComponent
   ],
   imports: [
