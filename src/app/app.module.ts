@@ -14,12 +14,13 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { SharedModule } from './shared/shared.module';
 import { ReactiveZooModule } from './reactive-zoo/reactive-zoo.module';
+import { DataBindingModule } from './data-binding/data-binding.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
+//import { DataBindingComponent } from './data-binding/data-binding.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
 
@@ -28,7 +29,7 @@ import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.compon
     AppComponent,
     HomeComponent,
     NavComponent,
-    DataBindingComponent,
+//    DataBindingComponent,
     AnimalDetailComponent,
     ZooAnimalFormComponent
   ],
@@ -38,6 +39,7 @@ import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.compon
     AppRoutingModule,
     ...ngxModules,
     SharedModule,
+    DataBindingModule,
     ReactiveZooModule
   ],
   providers: [BsModalService],
