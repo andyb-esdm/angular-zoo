@@ -1,6 +1,6 @@
 <div class="enclosure-button" [formGroup]="parent">
-  <button type="button" (click)="onClick()" [disabled]="parent.invalid">
-    <img src="assets/add.svg">
+  <button class="btn btn-success m-2" type="button" (click)="onClick()" [disabled]="parent.invalid">
+    <span class="fa fa-plus"></span>
     <ng-content></ng-content>
   </button>
 </div>
