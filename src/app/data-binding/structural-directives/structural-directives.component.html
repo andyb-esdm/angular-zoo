@@ -29,12 +29,12 @@
 
 <h5>Different components rendered based on an expresion using *ngIf</h5>
 <div class="animal-details-list">
-  <ng-container *ngFor="let animal of animals">
-    <div *ngIf="isZebra(animal)">
-      <app-zebra-detail [animal]="animal"></app-zebra-detail>
+  <ng-container *ngFor="let animal of animals; let i = index;">
+    <div *ngIf="i === selectedIndex">
+      <app-edit-animal-details [animal]="animal"></app-edit-animal-details>
     </div>
-    <div *ngIf="!isZebra(animal)">
-      <app-animal-detail [animal]="animal"></app-animal-detail>
+    <div *ngIf="i !== selectedIndex">
+      <app-animal-detail [animal]="animal" (click)="selectAnimal(i)"></app-animal-detail>
     </div>
   </ng-container>
 </div>

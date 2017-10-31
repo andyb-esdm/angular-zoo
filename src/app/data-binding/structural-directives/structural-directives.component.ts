@@ -18,6 +18,8 @@ export class StructuralDirectivesComponent implements OnInit {
     { name: 'Plains Zebra', description: 'The most common and geographically widespread species of zebra.', imageUrl: '/assets/zebra.png'}
   ];
 
+  selectedIndex: number;
+
   constructor() { }
 
   ngOnInit() {
@@ -25,6 +27,10 @@ export class StructuralDirectivesComponent implements OnInit {
 
   isZebra(animal: Animal): boolean {
     return animal.name === 'Plains Zebra';
+  }
+
+  selectAnimal(index: number) {
+    this.selectedIndex = index;
   }
 
 }

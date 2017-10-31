@@ -1,0 +1,17 @@
+<div class="card text-center m-1">
+  <div class="card-block p-2">
+    <h5 class="card-title">
+      <input [(ngModel)]="animal.name" type="text">
+    </h5>
+  </div>
+  <div class="card-block p-2">
+    <h5 class="card-title">
+      <img [src]="animal.imageUrl">
+    </h5>
+  </div>
+  <div class="card-block p-2">
+    <textarea cols="40" [(ngModel)]="animal.description" type="text">
+      </textarea>
+    
+  </div>
+</div>

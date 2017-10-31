@@ -13,7 +13,7 @@ import { PropertyBindingNestedComponent } from './property-binding-nested/proper
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
-import { ZebraDetailComponent } from './zebra-detail/zebra-detail.component';
+import { EditAnimalDetailsComponent } from './edit-animal-details/edit-animal-details.component';
 
 const dataBindingRoutes: Routes = [
   { path: 'data-binding', component: DataBindingComponent,
@@ -45,7 +45,7 @@ const dataBindingRoutes: Routes = [
     EventBindingComponent,
     TwoWayBindingComponent,
     StructuralDirectivesComponent,
-    ZebraDetailComponent
+    EditAnimalDetailsComponent
   ],
   exports: [
     DataBindingComponent
