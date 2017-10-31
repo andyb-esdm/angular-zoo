@@ -5,7 +5,8 @@
   <div class="enclosure-selected-list" *ngIf="selected.length" formArrayName="animals">
     <div class="enclosure-selected-item" *ngFor="let animal of selected; index as i;">
       <div [formGroupName]="i">
-        <span class="fa fa-check"></span> {{ animal }}
+        <span class="fa fa-check"></span>
+        {{ animal }}
         <button type="button" (click)="onRemove(i)">
           <span class="fa fa-times"></span>
         </button>
