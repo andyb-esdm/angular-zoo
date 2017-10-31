@@ -1,18 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-interpolation',
   templateUrl: './interpolation.component.html',
   styleUrls: ['./interpolation.component.css']
 })
-export class InterpolationComponent implements OnInit {
+export class InterpolationComponent {
 
   name = 'Aardvark';
   description = 'A medium-sized, burrowing, nocturnal mammal native to Africa.';
   
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

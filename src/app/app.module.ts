@@ -22,13 +22,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
+import { ToolingComponent } from './tooling/tooling.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent,
-    ZooAnimalFormComponent
+    ZooAnimalFormComponent,
+    ToolingComponent
   ],
   imports: [
     BrowserModule,
