@@ -3,6 +3,57 @@
   See also Angular Fundamentals
   <a href="https://angular.io/guide/architecture" target="_blank">https://angular.io/guide/architecture</a>
 </h5>
+<app-collapse-card [title]="'Single Page Applications (SPAs)'">
+  <ul>
+    <li>
+      An SPA is a web application that dynamically rewrites the current page rather than loading entirely new pages from a server.
+    </li>
+    <li>
+      It avoids interruption between successive pages, making it behave more like a desktop application.
+    </li>
+    <li>
+      Either all the necessary HTML, JavaScript, and CSS is retrieved with a single page load, or it's dynamically loaded and
+      added to the page in response to user actions.
+    </li>
+    <li>
+      The page never reloads nor does control transfer to another page. However, the HTML5 History API can be used
+      to provide the perception of separate pages in the application.
+    </li>
+    <li>
+      Interaction with an SPA usually involves dynamic communication with a web API behind the scenes.
+    </li>
+    <li>
+      Modern JavaScript frameworks such as React, Vue, and Angular are designed to make creating SPAs much easier than writing in pure JavaScript or with libraries like jQuery.
+    </li>
+  </ul>
+</app-collapse-card>
+
+<app-collapse-card [title]="'Angular'">
+  <ul>
+    <li>
+      Angular is written by Google and is designed to make it easier to build web applications.
+    </li>
+    <li>
+      It's called Angular because HTML has angular brackets and Angular manipulates and adds to HTML elements as directives and
+      components
+    </li>
+    <li>
+      Angular (2+) is not the same as AngularJS (1) though it shares some similarities. Angular is a new framwork that's just about
+      one year old.
+    </li>
+    <li>
+      Angular is heavily opinionated and a comprehensive framework. It integrates what its authors consider to be design best practices
+      when building large, enterprise applications.
+    </li>
+    <li>
+      More recently Angular is also being targeted at mobile (through Ionic and NativeScript). And desktop (through Node.js and
+      Electron).
+    </li>
+    <li>
+      Google have committed to supporting Angular and use it for some of its largest applications (e.g. AdWords)
+    </li>
+  </ul>
+</app-collapse-card>
 
 <app-collapse-card [title]="'Angular CLI'">
   <ul>
@@ -42,10 +93,10 @@
 <app-collapse-card [title]="'Angular Modules'">
   <ul>
     <li>
-      Angular has a modular architecture.
+      The Angular framework and Angular applications you write have a modular architecture.
     </li>
     <li>
-      Angular modules group together sets of functionality.
+      Angular modules group together related sets of functionality.
     </li>
     <li>
       There is a single root module (usually called AppModule) that is run (bootstrapped) when the application starts.
@@ -61,6 +112,9 @@
   <ul>
     <li>
       Components are the basic building blocks of Angular functionality and user-interface.
+    </li>
+    <li>
+      They belong to Angular modules.
     </li>
     <li>
       Follow similar approach to other JavaScript frameworks and modelled on the up-coming Web Components standard.
@@ -81,7 +135,7 @@
     </li>
     <hr>
     <app-collapse-card [title]="'Component Tree'">
-        <img src="/assets/reactive-zoo.png" style="width:100%;">
+      <img src="/assets/reactive-zoo.png" style="width:100%;">
     </app-collapse-card>
   </ul>
 </app-collapse-card>
