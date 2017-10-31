@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { SharedModule } from '../shared/shared.module';
+
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
@@ -11,6 +13,7 @@ import { PropertyBindingNestedComponent } from './property-binding-nested/proper
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { ZebraDetailComponent } from './zebra-detail/zebra-detail.component';
 
 const dataBindingRoutes: Routes = [
   { path: 'data-binding', component: DataBindingComponent,
@@ -30,7 +33,8 @@ const dataBindingRoutes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(dataBindingRoutes)
+    RouterModule.forChild(dataBindingRoutes),
+    SharedModule
   ],
   declarations: [
     InterpolationComponent,
@@ -40,7 +44,8 @@ const dataBindingRoutes: Routes = [
     PropertyBindingNestedComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
-    StructuralDirectivesComponent
+    StructuralDirectivesComponent,
+    ZebraDetailComponent
   ],
   exports: [
     DataBindingComponent

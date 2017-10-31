@@ -1,15 +1,31 @@
 <h2>Property Binding</h2>
-<img [src]="zebra.imageUrl">
-
-<app-animal-detail [animal]="giraffe"></app-animal-detail>
-
-<h5>{{giraffe.name}}</h5>
-<p [ngClass]="{'highlighted': isZebra(giraffe)}">
-  {{giraffe.description}}
+<p>
+  Properties of the DOM bound to properties of the component using square brackets. The expression sets the value of the property.
+  This includes element properties, component properties and directive properties.
+</p>
+<h5>Square brackets</h5>
+<p ngNonBindable>
+  <![CDATA[
+  Syntax: [property]="expression"
+    ]]>
 </p>
 
+<h5>Image src property</h5>
+<img [src]="animal1.imageUrl">
 
-<h5>{{zebra.name}}</h5>
-<p [ngClass]="{'highlighted': isZebra(zebra)}">
-  {{zebra.description}}
+<hr>
+
+<h5>Component input property</h5>
+<app-animal-detail [animal]="animal2"></app-animal-detail>
+
+<hr>
+<h5>An Angular directive</h5>
+<h5>{{animal1.name}}</h5>
+<p [ngClass]="{'highlighted': isZebra(animal1)}">
+  {{animal1.description}}
+</p>
+
+<h5>{{animal2.name}}</h5>
+<p [ngClass]="{'highlighted': isZebra(animal2)}">
+  {{animal2.description}}
 </p>

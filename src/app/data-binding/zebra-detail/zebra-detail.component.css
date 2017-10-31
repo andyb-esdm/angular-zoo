@@ -1,14 +1,5 @@
-p {
-    font-size: larger;
-}
-
-.animal-description {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: blue;
-}
-
-.zebra {
+.card {
+    width: 20rem;
     background: repeating-linear-gradient(
         -45deg,
         white,

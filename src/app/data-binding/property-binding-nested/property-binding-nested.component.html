@@ -1,5 +1,15 @@
 <h2>Nested Property Binding</h2>
+<p>For attributes use attr. Use dots for nested properties. Attribute binding, class property binding, style property binding. No hyphens allowed.</p>
+<h5>Square brackets</h5>
+<p ngNonBindable>
+  <![CDATA[
+    Syntax: [property.nestedProperty]="expression"
+  ]]>
+</p>
 
+<hr>
+
+<h5>Specific class property</h5>
 <h3>{{animal1.name}}</h3>
 <div class="animal-description" [class.zebra]="isZebra(animal1)">
   {{animal1.description}}
@@ -12,17 +22,21 @@
 
 <hr>
 
+<h5>Style font size property (no hyphens)</h5>
 <h3>{{animal1.name}}</h3>
-<div class="animal-description" [style.fontSize]="isZebra(animal1) ? '2rem' : '1rem'">
-  {{animal2.description}}
+<div [style.fontSize]="isZebra(animal1) ? '2rem' : '1rem'">
+  {{animal1.description}}
 </div>
 
 <h3>{{animal2.name}}</h3>
-<div class="animal-description" [style.fontSize]="isZebra(animal2) ? '2rem' : '1rem'">
+<div [style.fontSize]="isZebra(animal2) ? '2rem' : '1rem'">
   {{animal2.description}}
 </div>
 
 <hr>
 
-<button class="btn btn-primary" [attr.title]="isZebra(animal1) ? 'Zebra' : 'Not a zebra'">What am I?</button>
-<button class="btn btn-primary" [attr.title]="isZebra(animal2) ? 'Zebra' : 'Not a zebra'">What am I?</button>
+<h5>The title attribute of an element</h5>
+<h3>animal1</h3>
+<span class="btn btn-primary" [attr.title]="isZebra(animal1) ? 'Zebra' : 'Not a zebra'">What am I?</span>
+<h3>animal2</h3>
+<span class="btn btn-primary" [attr.title]="isZebra(animal2) ? 'Zebra' : 'Not a zebra'">What am I?</span>

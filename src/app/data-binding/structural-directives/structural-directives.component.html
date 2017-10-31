@@ -1,11 +1,46 @@
-<h2>Animal List</h2>
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let animal of animals">
-    {{animal.name}}
-  </li>
-</ul>
+<h2>Structural Directives</h2>
+<p>
+  Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing,
+  or manipulating elements.
+</p>
+<p>
+  The most common are ngFor for repoeating elements and ngIf for conditionally adding elements.
+</p>
+<h5>Preceded by an asterisk</h5>
+<p ngNonBindable>
+  <![CDATA[
+<element *ngFor="let animal of animals"></element>
+    ]]>
+</p>
+<p>or</p>
+<p ngNonBindable>
+  <![CDATA[
+  <element *ngIf="expression"></element>
+  ]]>
+</p>
+<p>There are also switch and if-else structural directives</p>
 
-<h2>Animal Details List</h2>
+<h5>Animal Details List using *ngFor</h5>
 <div class="animal-details-list">
-    <app-animal-detail *ngFor="let animal of animals" [animal]="animal"></app-animal-detail>
+  <app-animal-detail *ngFor="let animal of animals" [animal]="animal"></app-animal-detail>
 </div>
+
+<hr>
+
+<h5>Different components rendered based on an expresion using *ngIf</h5>
+<div class="animal-details-list">
+  <ng-container *ngFor="let animal of animals">
+    <div *ngIf="isZebra(animal)">
+      <app-zebra-detail [animal]="animal"></app-zebra-detail>
+    </div>
+    <div *ngIf="!isZebra(animal)">
+      <app-animal-detail [animal]="animal"></app-animal-detail>
+    </div>
+  </ng-container>
+</div>
+
+<hr>
+<h5>The animals array</h5>
+<pre>
+{{ animals | json }}
+</pre>

@@ -1,3 +1,16 @@
+<h2>Event Binding</h2>
+<p>
+    Execute an expression when an event occurs. Applies to standard DOM element events and custom component events.
+</p>
+<h5>Square brackets</h5>
+<p ngNonBindable>
+  <![CDATA[
+  Syntax: (eventName)="methodCall(parameters)"
+    ]]>
+</p>
+
+<h5>Call openModal and display the animal details on click</h5>
+
 <button type="button" class="btn btn-primary" (click)="openModal(template)">Show me the aardvark</button>
 
   <ng-template #template>
