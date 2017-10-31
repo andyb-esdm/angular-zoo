@@ -6,8 +6,8 @@
   <app-enclosure-name [parent]="form">
   </app-enclosure-name>
 
-  <app-enclosure-selected [parent]="form" [selected]="control.value" (remove)="removeAnimal($event)">
-  </app-enclosure-selected>
+  <app-animals-selected [parent]="form" [selected]="control.value" (remove)="removeAnimal($event)">
+  </app-animals-selected>
 
   <app-enclosure-button [parent]="form" (add)="onSubmit()">
     Add Enclosure

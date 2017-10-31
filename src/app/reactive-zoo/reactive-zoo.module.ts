@@ -6,7 +6,7 @@ import { EnclosureCreatorComponent } from './enclosure-creator/enclosure-creator
 import { EnclosureButtonComponent } from './enclosure-button/enclosure-button.component';
 import { EnclosureFormComponent } from './enclosure-form/enclosure-form.component';
 import { EnclosureNameComponent } from './enclosure-name/enclosure-name.component';
-import { EnclosureSelectedComponent } from './enclosure-selected/enclosure-selected.component';
+import { AnimalsSelectedComponent } from './animals-selected/animals-selected.component';
 import { AnimalsSelectorComponent } from './animals-selector/animals-selector.component';
 import { EnclosureListComponent } from './enclosure-list/enclosure-list.component';
 import { EnclosureService } from './enclosure.service';
@@ -25,7 +25,7 @@ import { JoinPipe } from './join.pipe';
     EnclosureButtonComponent,
     EnclosureFormComponent,
     EnclosureNameComponent,
-    EnclosureSelectedComponent,
+    AnimalsSelectedComponent,
     AnimalsSelectorComponent,
     EnclosureListComponent,
     JoinPipe

@@ -1,8 +1,10 @@
 
   <div class="card mb-3">
-  <div class="card-block bg-info text-light p-2" (click)="isCollapsed = !isCollapsed">
-    <h5 class="card-title">
+  <div class="card-block bg-secondary" (click)="isCollapsed = !isCollapsed">
+    <h5 class="p-2">
       {{title}}
+      <span *ngIf="isCollapsed" class="fa fa-angle-down fa-2x pull-right"></span>
+      <span *ngIf="!isCollapsed" class="fa fa-angle-up fa-2x pull-right"></span>
     </h5>
   </div>
   <div class="card-block p-2" [collapse]="isCollapsed">

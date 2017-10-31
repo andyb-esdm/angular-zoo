@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EnclosureSelectedComponent } from './enclosure-selected.component';
+import { AngularOverviewComponent } from './angular-overview.component';
 
-describe('EnclosureSelectedComponent', () => {
-  let component: EnclosureSelectedComponent;
-  let fixture: ComponentFixture<EnclosureSelectedComponent>;
+describe('AngularOverviewComponent', () => {
+  let component: AngularOverviewComponent;
+  let fixture: ComponentFixture<AngularOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EnclosureSelectedComponent ]
+      declarations: [ AngularOverviewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EnclosureSelectedComponent);
+    fixture = TestBed.createComponent(AngularOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

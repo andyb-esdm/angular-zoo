@@ -1,0 +1,87 @@
+<h1>Angular Overview</h1>
+<h5 class="mb-3">
+  See also Angular Fundamentals
+  <a href="https://angular.io/guide/architecture" target="_blank">https://angular.io/guide/architecture</a>
+</h5>
+
+<app-collapse-card [title]="'Angular CLI'">
+  <ul>
+    <li>
+      Standalone Angular applications are complex.
+    </li>
+    <li>
+      The Angular CLI hides this complexity so you can focus on functionality.
+    </li>
+    <li>
+      It encourages you to use best practices according to the Angular Style Guide
+      <a href="https://angular.io/guide/styleguide" target="_blank">https://angular.io/guide/styleguide</a>.
+    </li>
+    <li>
+      These are guidelines that make it easier to maintain the application as it grows.
+    </li>
+  </ul>
+</app-collapse-card>
+
+<app-collapse-card [title]="'TypeScript'">
+  <ul>
+    <li>
+      TypeScript is a superset of JavaScript developed by Microsoft.
+    </li>
+    <li>
+      Brings in useful features of current and future versions of JavaScript, which are not yet supported in web browsers.
+    </li>
+    <li>
+      It compiles to JavaScript that can be run in a web browser.
+    </li>
+    <li>
+      Embraced by Google for the development of Angular and is the recommended language for Angular development.
+    </li>
+  </ul>
+</app-collapse-card>
+
+<app-collapse-card [title]="'Angular Modules'">
+  <ul>
+    <li>
+      Angular has a modular architecture.
+    </li>
+    <li>
+      Angular modules group together sets of functionality.
+    </li>
+    <li>
+      There is a single root module (usually called AppModule) that is run (bootstrapped) when the application starts.
+    </li>
+    <li>
+      Angular modules are decorated with
+      <code>@NgModule</code> where other modules are imported and application components are declared.
+    </li>
+  </ul>
+</app-collapse-card>
+
+<app-collapse-card [title]="'Components'">
+  <ul>
+    <li>
+      Components are the basic building blocks of Angular functionality and user-interface.
+    </li>
+    <li>
+      Follow similar approach to other JavaScript frameworks and modelled on the up-coming Web Components standard.
+    </li>
+    <li>
+      Angular components are decorated with
+      <code>@NgComponent</code> where the component selector, html template and css files are declared.
+    </li>
+    <li>
+      Component approach is a UI design philosophy.
+    </li>
+    <li>
+      Components are not created for reusability. They are for created simplicity to break the application down into understandable
+      parts.
+    </li>
+    <li>
+      Features in the application should be composed of a component tree that reflects the UI structure.
+    </li>
+    <hr>
+    <app-collapse-card [title]="'Component Tree'">
+        <img src="/assets/reactive-zoo.png" style="width:100%;">
+    </app-collapse-card>
+  </ul>
+</app-collapse-card>

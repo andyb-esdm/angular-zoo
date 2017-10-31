@@ -23,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
 import { ToolingComponent } from './tooling/tooling.component';
+import { AngularOverviewComponent } from './angular-overview/angular-overview.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -30,17 +32,19 @@ import { ToolingComponent } from './tooling/tooling.component';
     HomeComponent,
     NavComponent,
     ZooAnimalFormComponent,
-    ToolingComponent
+    ToolingComponent,
+    AngularOverviewComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     ...ngxModules,
     SharedModule,
     DataBindingModule,
     ReactiveZooModule,
-    ServicesModule
+    ServicesModule,
+    AppRoutingModule // keep this last for wildcard route to PageNotFoundComponent
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]

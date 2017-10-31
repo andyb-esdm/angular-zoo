@@ -3,11 +3,11 @@ import { FormGroup } from '@angular/forms';
 import { Animal } from '../animal';
 
 @Component({
-  selector: 'app-enclosure-selected',
-  templateUrl: './enclosure-selected.component.html',
-  styleUrls: ['./enclosure-selected.component.css']
+  selector: 'app-animals-selected',
+  templateUrl: './animals-selected.component.html',
+  styleUrls: ['./animals-selected.component.css']
 })
-export class EnclosureSelectedComponent implements OnInit {
+export class AnimalsSelectedComponent implements OnInit {
   @Input() parent: FormGroup;
 
   @Input() selected: Animal[];
