@@ -25,10 +25,6 @@ export class StructuralDirectivesComponent implements OnInit {
   ngOnInit() {
   }
 
-  isZebra(animal: Animal): boolean {
-    return animal.name === 'Plains Zebra';
-  }
-
   selectAnimal(index: number) {
     this.selectedIndex = index;
   }
