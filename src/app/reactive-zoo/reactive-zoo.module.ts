@@ -11,6 +11,7 @@ import { AnimalsSelectorComponent } from './animals-selector/animals-selector.co
 import { EnclosureListComponent } from './enclosure-list/enclosure-list.component';
 import { EnclosureService } from './enclosure.service';
 import { JoinPipe } from './join.pipe';
+import { ApplicationStateComponent } from './application-state/application-state.component';
 
 /*
   Based on Todd Motto's article: https://toddmotto.com/component-architecture-reactive-forms-angular#component-architecture
@@ -28,10 +29,12 @@ import { JoinPipe } from './join.pipe';
     AnimalsSelectedComponent,
     AnimalsSelectorComponent,
     EnclosureListComponent,
-    JoinPipe
+    JoinPipe,
+    ApplicationStateComponent
   ],
   exports: [
-    EnclosureCreatorComponent
+    EnclosureCreatorComponent,
+    ApplicationStateComponent
   ],
   providers: [
     EnclosureService
