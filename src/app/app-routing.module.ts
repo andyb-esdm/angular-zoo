@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AngularOverviewComponent } from './angular-overview/angular-overview.component';
 import { ToolingComponent } from './tooling/tooling.component';
 import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { EnclosureCreatorComponent } from './reactive-zoo/enclosure-creator/enclosure-creator.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'angular-overview', component: AngularOverviewComponent},
   { path: 'tooling', component: ToolingComponent },
   { path: 'zoo-animal-form', component: ZooAnimalFormComponent },
+  { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'enclosure-creator', component: EnclosureCreatorComponent },
   { path: '**', component: PageNotFoundComponent}
 ];

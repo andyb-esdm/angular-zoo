@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -24,7 +24,8 @@ import { NavComponent } from './nav/nav.component';
 import { ZooAnimalFormComponent } from './zoo-animal-form/zoo-animal-form.component';
 import { ToolingComponent } from './tooling/tooling.component';
 import { AngularOverviewComponent } from './angular-overview/angular-overview.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
 
 @NgModule({
   declarations: [
@@ -34,11 +35,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ZooAnimalFormComponent,
     ToolingComponent,
     AngularOverviewComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     ...ngxModules,
     SharedModule,
     DataBindingModule,
